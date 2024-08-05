@@ -18,6 +18,9 @@ const inputPhoneValue = telefone.value;
 const templateHTMLNome =`<li>${inputNameValue} </li>`;
 const templateHTMLIdade = `<li>${inputAgeValue}</li>`;
 const templateHTMLTelefone = `<li>${inputPhoneValue}</li>`;
+
+
+const removeHTMLNome = nome.value;
 /* Condição*/
 
 if(inputNameValue === ""){
@@ -37,6 +40,10 @@ if(inputPhoneValue <= 13){
 listaN.innerHTML += templateHTMLNome; 
 listaI.innerHTML += templateHTMLIdade;
 listaT.innerHTML += templateHTMLTelefone;
+
+listaN.remove += removeHTMLNome;
+
+
 /* Limpando meu campo*/
 nome.value = "";
 idade.value = "";
