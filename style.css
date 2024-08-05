@@ -14,6 +14,8 @@ header{
 h1{
     justify-content: center;
     display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 .container{
     width: 25%;
@@ -21,7 +23,6 @@ h1{
     color: rgb(255, 255, 255);
     margin-left: 35%;
     margin-top:35px;
-    
 }
 
 /*CSS DOS DADOS*/
@@ -101,19 +102,20 @@ background-color: rgb(196, 196, 196);
     justify-content: center;
     display: flex;
     text-align: center;
-    margin: 80px;
 }
 
 
 .listaT,.listaN,.listaI{
     list-style: none;
     border: rgb(255, 255, 255) solid 2px;
-    color: white;
+    color: rgb(129, 245, 119);
     padding: 5px;
+    width: 100%;
 }
 li{
     margin: 0px;
     padding: 0px;
     border-top: rgb(255, 255, 255) solid 2px;
     color: white;
+    width: 100%;
 }
