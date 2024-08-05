@@ -1,0 +1,68 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-image:url(/img/roblox-banner.png);
+    background-position-x: center;
+    background-size: 300px ;
+    font-family: 'Builder Sans,Helvetica Neue','Helvetica',Arial,Lucida Grande,sans-serif;
+}
+
+header{
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    width: 25%;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    margin-left: 35%
+}
+ 
+.form-control{
+    font-size: 12px;
+    font-weight: 500px;
+};
+.form-control input{
+    height: 50px;
+    border: none;
+}
+
+.form-button{
+    background-color: green;
+    width: 50%;
+    padding: 50px;
+    height: 38px;
+}
+ 
+.form-button button{
+border: none;
+border-radius: 5px;
+font-size: 16px;
+height: 38px;
+}
+
+.form-button button:hover{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+.listona{
+    display: flex;
+    text-align: center;
+    margin: 80px;
+}
+
+
+.listaT,.listaN,.listaI{
+    list-style: none;
+    border: rgb(255, 255, 255) solid 2px;
+    color: white;
+    padding: 5px;
+}
+li{
+    margin: 0px;
+    padding: 0px;
+    border-top: rgb(255, 255, 255) solid 2px;
+    color: white;
+}
