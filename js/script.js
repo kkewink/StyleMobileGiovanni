@@ -3,30 +3,35 @@ const idade = document.querySelector("#idade");
 const telefone = document.querySelector("#telefone");
 
 const button = document.querySelector("button");
-const listaN = document.querySelector(".listaN");
-const listaI = document.querySelector(".listaI");
-const listaT = document.querySelector(".listaT");
 
+const listona = document.querySelector(".listona")
+ 
 /* Eventos de JavaScript*/
 button.addEventListener("click", (event) =>{
 event.preventDefault()
 
+
+
 const inputNameValue = nome.value;
 const inputAgeValue = idade.value;
 const inputPhoneValue = telefone.value;
+const removeHTML = `
+   <div class="dados">
+        <h4>NOME:<p>${inputNameValue}</p></h4>       
+        <h4>IDADE:<p>${inputAgeValue}</p></h4>   
+        <h4>TELEFONE:<p>${inputPhoneValue}</p></h4>
 
-const templateHTMLNome =`<li>${inputNameValue} </li>`;
-const templateHTMLIdade = `<li>${inputAgeValue}</li>`;
-const templateHTMLTelefone = `<li>${inputPhoneValue}</li>`;
+         <button class="jogafora"><img src="/img/lixo-removebg-preview.png" alt=""></button>
+    </div>
 
+`;
 
-const removeHTMLNome = nome.value;
 /* Condição*/
 
 if(inputNameValue === ""){
     alert("Nome a partir de 3 caracteris")
     return false;
-};
+}
 if(inputAgeValue <= 15){
     alert("Idade a partir dos 15 anos!!!!")
     return false;
@@ -37,15 +42,42 @@ if(inputPhoneValue <= 13){
 };
 
 /* Incluindo itens no HTML*/
-listaN.innerHTML += templateHTMLNome; 
-listaI.innerHTML += templateHTMLIdade;
-listaT.innerHTML += templateHTMLTelefone;
+// listona.innerHTML += templateHTMLNome; 
+// listona.innerHTML += templateHTMLIdade;
+// listona.innerHTML += templateHTMLTelefone;
 
-listaN.remove += removeHTMLNome;
-
+listona.innerHTML += removeHTML;    
 
 /* Limpando meu campo*/
 nome.value = "";
 idade.value = "";
 telefone.value = "";
+funcDeletar()
+
 });
+
+
+const jorafora = document.getElementsByClassName("jogafora");
+console.log(jorafora);
+
+
+
+
+async function funcDeletar() {
+
+    for (let index = 0; index < jorafora.length; index++) {
+
+        jorafora[index].addEventListener("click", (event) =>{
+            event.preventDefault()
+            if(jorafora.length === 1){
+                jorafora[0].parentElement.remove()
+            }else {
+                jorafora[index].parentElement.remove()
+            }
+            
+            }); 
+    }
+    
+
+
+}
